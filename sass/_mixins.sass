@@ -1,0 +1,44 @@
+@mixin background-size ($arg)
+  -webkit-background-size: $arg
+  -moz-background-size: $arg
+  -ms-background-size: $arg
+  -o-background-size: $arg
+  background-size: $arg
+
+@mixin blur ($arg)
+  -webkit-filter: blur($arg)
+  -moz-filter: blur($arg)
+  -ms-filter: blur($arg)
+  -o-filter: blur($arg)
+  filter: blur($arg)
+
+@mixin core-form ($width, $height)
+  display: block
+  position: absolute
+  margin: auto
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: $width
+  height: $height
+  border: 1px solid
+  border-radius: 15px
+  border-color: rgba(255,255,255,0.2)
+  box-shadow: 0 2px 5px rgba(255,255,255,0.3)
+
+@mixin glass ()
+  position: relative
+  background-color: rgba(255,255,255,0.25)
+  &::before
+    display: block
+    position: absolute
+    width: 100%
+    height: 100%
+    border-radius: 15px
+    /*background: url(../img/login.jpg) no-repeat center fixed;*/
+    @include background-size (cover)
+    @include blur (5px)
+    opacity: 0.8
+    z-index: -1
+    content: ' '
