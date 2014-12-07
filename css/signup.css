@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+}
+
+#bg-cover {
+  background-color: blue;
+  background-size: cover;
+}
+
+#signup {
+  display: block;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  height: 520px;
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: green;
+}
+
+#signupForm {
+  margin: auto;
+  padding: 40px 30px 40px 30px;
+}
+
+.form-group {
+  margin: 20px 0 20px 0;
+}
