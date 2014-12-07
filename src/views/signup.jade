@@ -1,43 +1,37 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="utf-8")
-    title LetSplit
-    // Stylesheets
-    link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
-    link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
-    link(rel="stylesheet" type="text/css" href="../../client/css/signup.css")
-  body
-    #signup-bg.bg-cover
-      #signup.glass
-        form#signupForm(role="form")
-          .form-group.names.first
-            label First Name
-            input.form-control(type="text")
-          .form-group.names.last
-            label Last Name
-            input.form-control(type="text")
-          .form-group
-            label Username
-            input.form-control(type="text")
-          .form-group
-            label Email
-            input.form-control(type="email")
-          .form-group
-            label Password
-            input.form-control(type="password")
-          .form-group
-            label Confirm Password
-            input.form-control(type="password")
-          button.btn.btn-primary.btn-lg.btn-block Sign Up
-          #return.form-group
-            a(href="#") Already have an account?
-      svg(xmlns="https://www.w3.org/2000/svg", version="1.1")
-        defs
-          filter#blur
-            feGaussianBlur(stdDeviation="5")
-      footer Copyright 2014
-    // Scripts
-    script(type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js")
-    script(type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js")
-    script(type="text/javascript" src="../../client/js/signup.js")
+extends ./base.jade
+block title
+  title LetSplit
+block append style
+  link(rel="stylesheet" type="text/css" href="../../client/css/signup.css")
+block body
+  #signup-bg.bg-cover
+    #signup.glass
+      form#signupForm(role="form")
+        .form-group.names.first
+          label First Name
+          input.form-control(type="text")
+        .form-group.names.last
+          label Last Name
+          input.form-control(type="text")
+        .form-group
+          label Username
+          input.form-control(type="text")
+        .form-group
+          label Email
+          input.form-control(type="email")
+        .form-group
+          label Password
+          input.form-control(type="password")
+        .form-group
+          label Confirm Password
+          input.form-control(type="password")
+        button.btn.btn-primary.btn-lg.btn-block Sign Up
+        #return.form-group
+          a(href="#") Already have an account?
+    svg(xmlns="https://www.w3.org/2000/svg", version="1.1")
+      defs
+        filter#blur
+          feGaussianBlur(stdDeviation="5")
+    footer Copyright 2014
+block append scripts
+  script(type="text/javascript" src="../../client/js/signup.js")
