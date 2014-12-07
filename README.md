@@ -16,7 +16,8 @@ A web application for expense distributions between multiple users.
 
 ###Languages###
 
-* HTML
+* ~~HTML~~
+* Jade
 * CSS
 * Sass
 * JavaScript

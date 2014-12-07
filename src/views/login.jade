@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title LetSplit
+    // Stylesheets
+    link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
+    link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../client/css/login.css")
+  body
+    #login-bg.bg-cover
+      #login.glass
+        form#loginForm.form-horizontal(role="form")
+          .input-group
+            span.input-group-addon
+              i.fa.fa-user.fa-fw
+            input.form-control(placeholder="Username or email")
+          .input-group
+            span.input-group-addon
+             i.fa.fa-lock.fa-fw
+            input.form-control(placeholder="Password")
+          button.btn.btn-primary.btn-lg.btn-block Sign In
+          .input-group
+            span.login-col-left
+              a(href="#") Password
+            span.login-col-center |
+            span.login-col-right
+              a(href="#") Register
+      svg(xmlns="http://www.w3.org/2000/svg", version="1.1")
+        defs
+          filter#blur
+            feGaussianBlur(stdDeviation="5")
+      footer Copyright 2014
+    // Scripts
+    script(type="text/javascript", src="https://code.jquery.com/jquery-1.11.0.min.js")
+    script(type="text/javascript", src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js")
+    script(type="text/javascript", src="../../client/js/login.js")
