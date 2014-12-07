@@ -4,6 +4,8 @@
   "description": "A web application for expense distributions between multiple users.",
   "main": "./src/server.js",
   "scripts": {
+    "start": "node ./src/server.js",
+    "pretest": "jshint ./src",
     "test": "echo \"Tests complete!\""
   },
   "repository": {
@@ -18,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/exocodez/LetSplit/issues"
   },
-  "homepage": "https://github.com/exocodez/LetSplit"
+  "homepage": "https://github.com/exocodez/LetSplit",
+  "devDependencies": {
+    "jshint": "^2.5.10"
+  }
 }
