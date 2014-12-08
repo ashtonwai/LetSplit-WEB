@@ -1,0 +1,31 @@
+extends ./base.jade
+block title
+  title LetSplit
+block append style
+  link(rel="stylesheet" type="text/css" href="/assets/css/login.css")
+block body
+  #login-bg.bg-cover
+    #login.glass
+      form#loginForm.form-horizontal(role="form")
+        .input-group
+          span.input-group-addon
+            i.fa.fa-user.fa-fw
+          input.form-control(placeholder="Username or email")
+        .input-group
+          span.input-group-addon
+           i.fa.fa-lock.fa-fw
+          input.form-control(placeholder="Password")
+        button.btn.btn-primary.btn-lg.btn-block Sign In
+        .input-group
+          span.login-col-left
+            a(href="#") Password
+          span.login-col-center |
+          span.login-col-right
+            a(href="#") Register
+    svg(xmlns="http://www.w3.org/2000/svg", version="1.1")
+      defs
+        filter#blur
+          feGaussianBlur(stdDeviation="5")
+    footer Copyright 2014
+block append scripts
+  script(type="text/javascript", src="/assets/js/login.js")

@@ -1,0 +1,37 @@
+extends ./base.jade
+block title
+  title LetSplit
+block append style
+  link(rel="stylesheet" type="text/css" href="/assets/css/signup.css")
+block body
+  #signup-bg.bg-cover
+    #signup.glass
+      form#signupForm(role="form")
+        .form-group.names.first
+          label First Name
+          input.form-control(type="text")
+        .form-group.names.last
+          label Last Name
+          input.form-control(type="text")
+        .form-group
+          label Username
+          input.form-control(type="text")
+        .form-group
+          label Email
+          input.form-control(type="email")
+        .form-group
+          label Password
+          input.form-control(type="password")
+        .form-group
+          label Confirm Password
+          input.form-control(type="password")
+        button.btn.btn-primary.btn-lg.btn-block Sign Up
+        #return.form-group
+          a(href="#") Already have an account?
+    svg(xmlns="https://www.w3.org/2000/svg", version="1.1")
+      defs
+        filter#blur
+          feGaussianBlur(stdDeviation="5")
+    footer Copyright 2014
+block append scripts
+  script(type="text/javascript" src="/assets/js/signup.js")

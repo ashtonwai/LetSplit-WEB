@@ -1,15 +1,21 @@
 .bg-cover {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100%; }
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px 15px 10px 15px; }
+
+#signup-bg {
+  background: url(/assets/img/signup.jpg) no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-
-#signup-bg {
-  background: url(../img/signup.jpg) no-repeat center fixed; }
 
 #signup {
   display: block;
