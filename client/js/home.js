@@ -1,6 +1,7 @@
 var $home_bg = document.getElementById('home-bg');
 var $navbar = document.getElementById('navbar');
 var $nav_toggle = document.getElementById('nav-toggle');
+var $nav_side = document.getElementById('nav-side');
 
 // Animation
 $(document).ready(function() {
@@ -10,8 +11,10 @@ $(document).ready(function() {
 
 $nav_toggle.addEventListener('click', function() {
   if (!$nav_toggle.classList.contains('active')) {
+    TweenMax.to($nav_side, 0.5, {x: 100, ease: Sine.easeInOut});
     this.classList.toggle('active');
   } else {
+    TweenMax.to($nav_side, 0.5, {x: 0, ease: Sine.easeInOut});
     this.classList.remove('active');
   }
 });
