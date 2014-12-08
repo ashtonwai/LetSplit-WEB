@@ -12,7 +12,7 @@
   -o-filter: blur($arg)
   filter: blur($arg)
 
-@mixin core-form ($width, $height)
+@mixin form ($width, $height, $radius)
   display: block
   position: absolute
   margin: auto
@@ -23,22 +23,22 @@
   width: $width
   height: $height
   border: 1px solid
-  border-radius: 15px
+  border-radius: $radius
   border-color: rgba(255,255,255,0.2)
-  box-shadow: 0 2px 5px rgba(255,255,255,0.3)
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3)
 
-@mixin glass ()
+@mixin glass ($transparent, $blur)
   position: relative
-  background-color: rgba(255,255,255,0.25)
+  background-color: rgba(255,255,255,$transparent)
   &::before
     display: block
     position: absolute
     width: 100%
     height: 100%
     border-radius: 15px
-    /*background: url(../img/login.jpg) no-repeat center fixed;*/
+    /*background: url(/assets/img/login.jpg) no-repeat center fixed*/
     @include background-size (cover)
-    @include blur (5px)
+    @include blur ($blur)
     opacity: 0.8
     z-index: -1
     content: ' '
