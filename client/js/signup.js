@@ -2,6 +2,42 @@ var $signup = document.getElementById('signup');
 var $signup_bg = document.getElementById('signup-bg');
 var $login_return = document.getElementById('login-return');
 
+// Signup
+$('#signup-btn').on('click', function(e) {
+  e.preventDefault();
+
+  if ($('#firstname').val() == "" || $('#lastname').val() == "" || $('#username') == "" || $('#email') == "" || $('#password') == "" || $('#confirm') == "") {
+    //handleError("All fields are required");
+    return false;
+  } else if ($('#password').val() !== $('#confirm').val()) {
+    //handleError("Passwords do not match");
+    return false;
+  } else {
+    sendAjax($('#signupForm').attr('action'), $('#signupForm').serialize());
+    return false;
+  }
+});
+
+// Ajax
+function sendAjax(action, data) {
+  $.ajax({
+    cache: false,
+    type: 'POST',
+    url: action,
+    data: data,
+    dataType: 'json',
+    success: function(result, status, xhr) {
+      enterPage(result.redirect);
+    },
+    error: function(xhr, status, error) {
+      var msg = JSON.parse(xhr.responseText).error;
+      console.log(msg);
+    }
+  });
+  return false;
+}
+
+// Animation
 $(document).ready(function() {
   TweenMax.fromTo($signup, 1.5, {y: -150, opacity: 0}, {y: 0, opacity: 1, ease: Sine.easeInOut});
   TweenMax.fromTo($signup_bg, 1, {opacity: 0}, {opacity: 1, ease: Sine.easeInOut});

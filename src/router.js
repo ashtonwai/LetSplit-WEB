@@ -6,6 +6,7 @@ var router = function(app) {
   app.get('/signup', controllers.Account.signupPage);
   app.post('/signup', controllers.Account.signup);
   app.get('/logout', controllers.Account.logout);
+  app.get('/home', controllers.Home.homePage);
   app.get('/', controllers.Account.loginPage);
 };
 
