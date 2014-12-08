@@ -6,15 +6,15 @@ block append style
 block body
   #login-bg.bg-cover
     #login.glass
-      form#loginForm.form-horizontal(role="form")
+      form#loginForm.form-horizontal(name="loginForm", role="form", action="/login", method="POST")
         .input-group
           span.input-group-addon
             i.fa.fa-user.fa-fw
-          input.form-control(placeholder="Username or email")
+          input#user.form-control(name="user", type="text", placeholder="Username or email")
         .input-group
           span.input-group-addon
            i.fa.fa-lock.fa-fw
-          input.form-control(placeholder="Password")
+          input#pass.form-control(name="pass", type="password", placeholder="Password")
         button#login-btn.btn.btn-primary.btn-lg.btn-block Sign In
         .input-group
           span.login-col-left
