@@ -10,7 +10,7 @@ footer {
   margin: 10px 15px 10px 15px; }
 
 #login-bg {
-  background: url(../img/login.jpg) no-repeat center fixed;
+  background: url(/assets/img/login.jpg) no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;

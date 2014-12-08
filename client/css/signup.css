@@ -10,7 +10,7 @@ footer {
   margin: 10px 15px 10px 15px; }
 
 #signup-bg {
-  background: url(../img/signup.jpg) no-repeat center fixed;
+  background: url(/assets/img/signup.jpg) no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
