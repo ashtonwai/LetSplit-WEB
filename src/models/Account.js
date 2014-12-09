@@ -83,7 +83,6 @@ AccountSchema.statics.findByEmail = function(email, callback) {
 
 AccountSchema.statics.generateHash = function(password, callback) {
   var salt = crypto.randomBytes(saltLength);
-  console.log("generateHash = " + password);
 
   crypto.pbkdf2(password, salt, iterations, keyLength, function(err, hash) {
     return callback(salt, hash.toString('hex'));
