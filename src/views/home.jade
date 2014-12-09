@@ -25,6 +25,15 @@ block body
       li.side-btn
         i.fa.fa-gear.fa-3x
         label Settings
-    footer Copyright 2014
+    #main
+      #app
+        canvas#chart(width="400px", height="400px")
+        a.circle-btn(style="float:left;")
+          i#plus.fa.fa-plus.fa-3x
+        a.circle-btn(style="float: right;")
+          i#minus.fa.fa-minus.fa-3x
+    block footer
+      footer Copyright 2014
 block append scripts
+  script(type="text/javascript", src="/assets/js/Chart.min.js")
   script(type="text/javascript", src="/assets/js/home.js")
