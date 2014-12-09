@@ -7,7 +7,8 @@
 svg {
   position: absolute;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  z-index: -2; }
 
 footer {
   position: absolute;
@@ -43,11 +44,7 @@ footer {
     height: 100%;
     border-radius: 15px;
     /*background: url(/assets/img/home.jpg) no-repeat center fixed */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    /*@include background-size (cover) */
     -webkit-filter: blur(10px);
     -moz-filter: blur(10px);
     -ms-filter: blur(10px);
@@ -63,7 +60,8 @@ footer {
   top: 1px;
   left: -100px;
   width: 100px;
-  height: calc(100% - 60px);
+  height: calc(100% - 61px);
+  z-index: 1;
   border: 1px solid;
   border-radius: 1px;
   border-color: rgba(255, 255, 255, 0.2);
@@ -72,10 +70,13 @@ footer {
     display: block;
     margin: 50px 0 50px 0;
     cursor: pointer;
-    text-align: center; }
+    text-align: center;
+    transition: color 0.5s ease; }
     #nav-side .side-btn label {
       display: block;
       cursor: pointer; }
+  #nav-side .side-btn:hover {
+    color: #337ab7; }
 
 .glass-side {
   position: relative;
@@ -87,11 +88,7 @@ footer {
     height: 100%;
     border-radius: 15px;
     /*background: url(/assets/img/home.jpg) no-repeat center fixed */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    /*@include background-size (cover) */
     -webkit-filter: blur(10px);
     -moz-filter: blur(10px);
     -ms-filter: blur(10px);
@@ -137,5 +134,37 @@ footer {
   float: right;
   margin: 15px;
   cursor: pointer; }
+
+#main {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  background-color: rgba(0, 0, 0, 0.3); }
+
+#app {
+  position: absolute;
+  margin: 100px auto 100px auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  height: 500px; }
+
+.circle-btn {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #F5F5F5;
+  border-radius: 50%;
+  background: #464646;
+  cursor: pointer;
+  text-decoration: none; }
+  .circle-btn #plus {
+    margin: 30px; }
+  .circle-btn #minus {
+    margin: 30px; }
 
 /*# sourceMappingURL=home.css.map */
