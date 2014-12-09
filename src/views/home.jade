@@ -1,2 +1,30 @@
-h1 Home
-a(href="/logout") Logout
+extends ./base.jade
+block title
+  title LetSplit | Home
+block append style
+  link(rel="stylesheet", href="/assets/css/home.css")
+block body
+  #home-bg.bg-cover
+    #navbar.glass
+      #nav-toggle.lines
+      a#nav-logout(href="logout")
+        i.fa.fa-power-off.fa-2x
+    ul#nav-side.glass-side
+      li.side-btn
+        i.fa.fa-home.fa-3x
+        label Home
+      li.side-btn
+        i.fa.fa-search.fa-3x
+        label Search
+      li.side-btn
+        i.fa.fa-plus.fa-3x
+        label New Circle
+      li.side-btn
+        i.fa.fa-users.fa-3x
+        label Friends
+      li.side-btn
+        i.fa.fa-gear.fa-3x
+        label Settings
+    footer Copyright 2014
+block append scripts
+  script(type="text/javascript", src="/assets/js/home.js")

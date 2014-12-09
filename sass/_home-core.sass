@@ -1,0 +1,76 @@
+#home-bg
+  background: url(/assets/img/home.jpg) no-repeat center fixed
+  @include background-size (cover)
+
+#navbar
+  display: block
+  margin: auto
+  width: 100%
+  height: 60px
+  border: 1px solid
+  border-radius: 1px
+  border-color: rgba(255,255,255,0.2)
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3)
+
+.glass
+  @include glass (0.5, 10px)
+
+#nav-side
+  display: inline-block
+  padding: 10px
+  top: 1px
+  left: -100px
+  width: 100px
+  height: calc(100% - 60px)
+  border: 1px solid
+  border-radius: 1px
+  border-color: rgba(255,255,255,0.2)
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3)
+  .side-btn
+    display: block
+    margin: 50px 0 50px 0
+    cursor: pointer
+    text-align: center
+    label
+      display: block
+      cursor: pointer
+
+.glass-side
+  @include glass (0.5, 10px)
+
+#nav-toggle
+  display: inline-block
+  margin: 25px 15px 25px 15px
+  cursor: pointer
+
+.lines, .lines:before, .lines:after
+  position: absolute
+  height: 5px
+  width: 30px
+  background: #333
+  border-radius: 2px
+  content: ''
+  transition: background .3s .1s ease
+  &:before, &:after
+    transform-origin: 50% 50%
+    transition: top .3s .3s ease, transform .3s ease
+  &:before
+    top: -10px
+  &:after
+    top: 10px
+
+#nav-toggle.active
+  background-color: transparent
+  &:before, &:after
+    transition: top .3s ease, transform .3s .3s ease
+    top: 0
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(-45deg)
+
+#nav-logout
+  display: inline-block
+  float: right
+  margin: 15px
+  cursor: pointer
