@@ -49,8 +49,9 @@ var AccountSchema = new mongoose.Schema({
 
 AccountSchema.methods.toAPI = function() {
   return {
+    _id: this._id,
     username: this.username,
-    _id: this._id
+    currentChart: null
   };
 };
 

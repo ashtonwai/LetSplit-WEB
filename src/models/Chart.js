@@ -3,6 +3,14 @@ var mongoose = require('mongoose');
 var ChartModel;
 
 var ChartSchema = new mongoose.Schema({
+  name: {
+    type: String
+  },
+
+  description: {
+    type: String
+  },
+  
   data: {
     type: Array,
     require: true

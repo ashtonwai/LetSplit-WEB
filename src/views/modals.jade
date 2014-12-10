@@ -1,0 +1,20 @@
+// New Circle Modal
+#newCircleModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type="button", data-dismiss="modal")
+          span(aria-hidden="true") &times;
+          span.sr-only Close
+        h4#newCircleLabel.modal-title New Circle
+      .modal-body
+        form#newCircleForm(role="form", action="/addCircle", method="POST")
+          .form-group
+            label.control-label Name
+            input.form-control(name="chartName", type="text")
+          .form-group
+            label.control-label Description
+            textarea.form-control(name="chartDesript")
+      .modal-footer
+        button#create-btn.btn.btn-primary Create
+        button.btn.btn-default(data-dismiss="modal") Close

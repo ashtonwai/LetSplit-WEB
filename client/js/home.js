@@ -12,6 +12,12 @@ var data = [
 }
 ];
 
+var $create_btn = document.getElementById('create-btn');
+$create_btn.addEventListener('click', function(e) {
+  e.preventDefault();
+  sendAjax($('#newCircleForm').attr('action'), $('#newCircleForm').serialize());
+});
+
 // Ajax
 function sendAjax(action, data) {
   $.ajax({
@@ -21,7 +27,7 @@ function sendAjax(action, data) {
     data: data,
     dataType: 'json',
     success: function(result, status, xhr) {
-      enterPage(result.redirect);
+      window.location.href = result.redirect;
     },
     error: function(xhr, status, error) {
       var msg = JSON.parse(xhr.responseText).error;

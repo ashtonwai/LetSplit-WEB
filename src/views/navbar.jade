@@ -2,6 +2,7 @@
   #nav-toggle.lines
   a#nav-logout(href="logout")
     i.fa.fa-power-off.fa-2x
+  h4#nav-user #{username}
 ul#nav-side.glass-side
   li.side-btn
     i.fa.fa-home.fa-3x
@@ -9,7 +10,7 @@ ul#nav-side.glass-side
   li.side-btn
     i.fa.fa-search.fa-3x
     label Search
-  li.side-btn
+  li.side-btn(type="button", data-toggle="modal", data-target="#newCircleModal")
     i.fa.fa-plus.fa-3x
     label New Circle
   li.side-btn

@@ -121,6 +121,11 @@ footer {
   #nav-toggle.active:after {
     transform: rotate(-45deg); }
 
+#nav-user {
+  display: inline-block;
+  float: right;
+  margin: 18px 10px 18px 10px; }
+
 #nav-logout {
   display: inline-block;
   float: right;

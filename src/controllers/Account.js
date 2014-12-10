@@ -2,7 +2,7 @@ var models = require('../models');
 var Account = models.Account;
 
 // include chart to create new chart
-var Chart = require('./Chart.js');
+//var Chart = require('./Chart.js');
 
 var loginPage = function(req, res) {
   res.render('login');
@@ -52,7 +52,7 @@ var signup = function(req, res) {
       } else {
         req.session.account = newAccount.toAPI();
         //create new chart
-        Chart.addChart(req, res);
+        //Chart.addChart(req, res);
         res.json({redirect: '/home'});
       }
     });
