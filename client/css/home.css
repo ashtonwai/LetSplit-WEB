@@ -16,14 +16,6 @@ footer {
   bottom: 0;
   margin: 10px 15px 10px 15px; }
 
-#home-bg {
-  background: url(/assets/img/home.jpg) no-repeat center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
 #navbar {
   display: block;
   margin: auto;
@@ -134,6 +126,14 @@ footer {
   float: right;
   margin: 15px;
   cursor: pointer; }
+
+#home-bg {
+  background: url(/assets/img/home.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 #main {
   display: inline-block;
