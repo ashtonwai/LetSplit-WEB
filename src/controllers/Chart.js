@@ -34,7 +34,7 @@ var addCircle = function(req, res) {
         }
       });
       req.session.account.currentChart = newChart._id;
-      res.json({redirect: '/home'});
+      res.json({redirect: '/app'});
     }
   });
 };

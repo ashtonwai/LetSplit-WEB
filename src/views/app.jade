@@ -1,6 +1,6 @@
 extends ./_base.jade
 block title
-  title LetSplit | Chart
+  title LetSplit | Circle
 block append style
   link(rel="stylesheet", href="/assets/css/app.css")
 block body
@@ -14,11 +14,12 @@ block body
           i#plus.fa.fa-plus.fa-3x
         a.circle-btn(style="float:right;")
           i#minus.fa.fa-minus.fa-3x
-        // Modals
-        include ./_modals.jade
+    // Modals
+    include ./_modals.jade
     block footer
       footer Copyright 2014
 block append scripts
+  script(type="text/javascript", src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
   script(type="text/javascript", src="/assets/js/lib/Chart.min.js")
   script(type="text/javascript", src="/assets/js/index.js")
   script(type="text/javascript", src="/assets/js/navbar.js")

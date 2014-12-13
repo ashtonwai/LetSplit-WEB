@@ -7,7 +7,7 @@ function sendAjax(action, data) {
     data: data,
     dataType: 'json',
     success: function(result, status, xhr) {
-      window.location.href = result.redirect;
+      enterPage(result.redirect);
     },
     error: function(xhr, status, error) {
       var msg = JSON.parse(xhr.responseText).error;
