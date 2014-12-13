@@ -33,3 +33,17 @@ $(document).ready(function() {
     .fromTo($plus, 0.75, {x: 100, y: -100, opacity: 0}, {x: 0, y: 0, opacity: 1, ease: Sine.easeInOut}, "+=0.5")
     .fromTo($minus, 0.75, {x: -100, y: -100, opacity: 0}, {x: 0, y: 0, opacity: 1, ease: Sine.easeInOut}, "-=1");
 });
+
+var $nav_toggle = document.getElementById('nav-toggle');
+var $nav_side = document.getElementById('nav-side');
+$nav_toggle.addEventListener('click', function() {
+  if (!$nav_toggle.classList.contains('active')) {
+    TweenMax.to($nav_side, 0.5, {x: 100, ease: Sine.easeInOut});
+    //TweenMax.to($main, 0.25, {x: 100, ease: Sine.easeInOut});
+    this.classList.toggle('active');
+  } else {
+    TweenMax.to($nav_side, 0.5, {x: 0, ease: Sine.easeInOut});
+    //TweenMax.to($main, 0.25, {x: 0, ease: Sine.easeInOut});
+    this.classList.remove('active');
+  }
+});

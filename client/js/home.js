@@ -1,3 +1,23 @@
+var chart = document.getElementsByClassName('chart')[0];
+var ctx = chart.getContext('2d');
+var data = [
+{
+  value: 1,
+  color:"#D3D3D3",
+  highlight: "#FF5A5E",
+  label: "Red"
+}
+];
+
+// Functions
+function loadChart() {
+  new Chart(ctx).Doughnut(data, {
+    animationEasing: "easeInOutCubic"
+  });
+}
+
+window.onload = loadChart();
+
 // Animation
 var $home_bg = document.getElementById('home-bg');
 var $navbar = document.getElementById('navbar');
@@ -9,4 +29,18 @@ $(document).ready(function() {
     .fromTo($navbar, 0.5, {opacity: 0, y: -60}, {opacity: 1, y: 0, ease:Sine.easeInOut}, "-=0.5")
     .fromTo($main, 0.25, {opacity: 0}, {opacity: 0.25, ease: Sine.easeInOut})
     .to($main, 0.75, {opacity: 1, ease: Sine.easeInOut})
+});
+
+var $nav_toggle = document.getElementById('nav-toggle');
+var $nav_side = document.getElementById('nav-side');
+$nav_toggle.addEventListener('click', function() {
+  if (!$nav_toggle.classList.contains('active')) {
+    TweenMax.to($nav_side, 0.5, {x: 100, ease: Sine.easeInOut});
+    TweenMax.to($main, 0.5, {x: 100, ease: Sine.easeInOut});
+    this.classList.toggle('active');
+  } else {
+    TweenMax.to($nav_side, 0.5, {x: 0, ease: Sine.easeInOut});
+    TweenMax.to($main, 0.5, {x: 0, ease: Sine.easeInOut});
+    this.classList.remove('active');
+  }
 });
