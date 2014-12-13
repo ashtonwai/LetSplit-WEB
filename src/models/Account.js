@@ -82,6 +82,30 @@ AccountSchema.statics.findByEmail = function(email, callback) {
   return AccountModel.findOne(search, callback);
 };
 
+AccountSchema.statics.searchUser = function(user, callback) {
+  return AccountModel.findByUsername(user, function(err, doc) {
+    if (err || !doc) {
+      return AccountModel.findByEmail(user, function(err, doc) {
+        if (err) {
+          return callback(err);
+        } else if (!doc) {
+          return callback();
+        } else {
+          return doc;
+        }
+      });
+    } else {
+      doc.validatePassword(password, function(result) {
+        if (result === true) {
+          return callback(null, doc);
+        } else {
+          return doc;
+        }
+      });
+    }
+  });
+};
+
 AccountSchema.statics.generateHash = function(password, callback) {
   var salt = crypto.randomBytes(saltLength);
 

@@ -18,25 +18,6 @@ $('#signup-btn').on('click', function(e) {
   }
 });
 
-// Ajax
-function sendAjax(action, data) {
-  $.ajax({
-    cache: false,
-    type: 'POST',
-    url: action,
-    data: data,
-    dataType: 'json',
-    success: function(result, status, xhr) {
-      enterPage(result.redirect);
-    },
-    error: function(xhr, status, error) {
-      var msg = JSON.parse(xhr.responseText).error;
-      console.log(msg);
-    }
-  });
-  return false;
-}
-
 // Animation
 $(document).ready(function() {
   TweenMax.fromTo($signup, 1.5, {y: -150, opacity: 0}, {y: 0, opacity: 1, ease: Sine.easeInOut});

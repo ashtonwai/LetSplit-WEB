@@ -1,0 +1,37 @@
+#app-bg
+  background: url(/assets/img/app.jpg) no-repeat center fixed
+  @include background-size (cover)
+
+#main
+  display: inline-block
+  position: absolute
+  left: 0
+  width: 100%
+  height: calc(100% - 60px)
+
+#app
+  position: absolute
+  margin: 100px auto 100px auto
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: 400px
+  height: 500px
+
+.circle-btn
+  display: inline-block
+  width: 100px
+  height: 100px
+  background: rgba(255,255,255,0.5)
+  border: 2px solid rgba(255,255,255,0.1)
+  border-radius: 50%
+  cursor: pointer
+  text-decoration: none
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3)
+  transition: background .3s .1s ease
+  &:hover
+    color: #337ab7
+    background: rgba(255,255,255,0.75)
+  #plus, #minus
+    margin: 30px

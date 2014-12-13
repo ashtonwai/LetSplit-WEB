@@ -33,9 +33,7 @@ var addCircle = function(req, res) {
           return res.status(400).json({error: "Fail to link account with chart"});
         }
       });
-      console.log('created chart');
       req.session.account.currentChart = newChart._id;
-      console.log(req.session.account.currentChart);
       res.json({redirect: '/home'});
     }
   });

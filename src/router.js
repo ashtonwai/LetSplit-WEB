@@ -7,8 +7,10 @@ var router = function(app) {
   app.post('/signup', controllers.Account.signup);
   app.get('/logout', controllers.Account.logout);
   app.get('/home', controllers.Home.homePage);
-  app.post('/addCircle', controllers.Chart.addCircle);
+  app.get('/app', controllers.Home.appPage);
   app.get('/', controllers.Account.loginPage);
+
+  app.post('/addCircle', controllers.Chart.addCircle);
 };
 
 module.exports = router;

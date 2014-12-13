@@ -24,7 +24,7 @@ footer {
   border: 1px solid;
   border-radius: 1px;
   border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); }
 
 .glass {
   position: relative;
@@ -57,7 +57,7 @@ footer {
   border: 1px solid;
   border-radius: 1px;
   border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 0.3); }
   #nav-side .side-btn {
     display: block;
     margin: 50px 0 50px 0;
@@ -132,8 +132,8 @@ footer {
   margin: 15px;
   cursor: pointer; }
 
-#home-bg {
-  background: url(/assets/img/home.jpg) no-repeat center fixed;
+#app-bg {
+  background: url(/assets/img/app.jpg) no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -145,7 +145,33 @@ footer {
   position: absolute;
   left: 0;
   width: 100%;
-  height: calc(100% - 60px);
-  background-color: rgba(0, 0, 0, 0.3); }
+  height: calc(100% - 60px); }
 
-/*# sourceMappingURL=home.css.map */
+#app {
+  position: absolute;
+  margin: 100px auto 100px auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  height: 500px; }
+
+.circle-btn {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s 0.1s ease; }
+  .circle-btn:hover {
+    color: #337ab7;
+    background: rgba(255, 255, 255, 0.75); }
+  .circle-btn #plus, .circle-btn #minus {
+    margin: 30px; }
+
+/*# sourceMappingURL=app.css.map */
