@@ -1,5 +1,5 @@
 // Ajax
-function sendAjax(action, data) {
+function sendAjax(action, data, callback) {
   $.ajax({
     cache: false,
     type: 'POST',
@@ -7,7 +7,7 @@ function sendAjax(action, data) {
     data: data,
     dataType: 'json',
     success: function(result, status, xhr) {
-      enterPage(result.redirect);
+      callback(result);
     },
     error: function(xhr, status, error) {
       var msg = JSON.parse(xhr.responseText).error;

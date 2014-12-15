@@ -13,7 +13,7 @@ $('#signup-btn').on('click', function(e) {
     //handleError("Passwords do not match");
     return false;
   } else {
-    sendAjax($('#signupForm').attr('action'), $('#signupForm').serialize());
+    sendAjax($('#signupForm').attr('action'), $('#signupForm').serialize(), enterPage);
     return false;
   }
 });
@@ -32,10 +32,10 @@ $login_return.addEventListener('click', function() {
   }, 1500);
 });
 
-function enterPage(direct) {
+var enterPage = function(result) {
   TweenMax.to($signup, 1.5, {y: -150, opacity: 0, ease: Sine.easeInOut});
   TweenMax.to($signup_bg, 1, {opacity: 0, ease: Sine.easeInOut});
   setInterval(function() {
-    window.location.href = direct;
+    window.location.href = result.redirect;
   }, 1500);
 }

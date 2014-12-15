@@ -10,7 +10,8 @@ var router = function(app) {
   app.get('/app', controllers.Home.appPage);
   app.get('/', controllers.Account.loginPage);
 
-  app.post('/addCircle', controllers.Chart.addCircle);
+  app.post('/addCircle', controllers.Circle.addCircle);
+  app.post('/getAllCircles', controllers.Circle.getAllCircles);
 };
 
 module.exports = router;

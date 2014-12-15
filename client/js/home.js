@@ -16,7 +16,14 @@ function loadChart() {
   });
 }
 
-window.onload = loadChart();
+var chartList = function(data) {
+  console.log(data);
+}
+
+window.onload = function() {
+  loadChart();
+  sendAjax('/getCharts', null, chartList);
+};
 
 // Animation
 var $home_bg = document.getElementById('home-bg');
@@ -44,3 +51,7 @@ $nav_toggle.addEventListener('click', function() {
     this.classList.remove('active');
   }
 });
+
+function enterPage(result) {
+  window.location.href = result.redirect;
+}

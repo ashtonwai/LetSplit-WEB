@@ -51,7 +51,7 @@ AccountSchema.methods.toAPI = function() {
   return {
     _id: this._id,
     username: this.username,
-    currentChart: null
+    select: "548bf8316063171b50373150"
   };
 };
 

@@ -36,6 +36,7 @@ $(document).ready(function() {
 
 var $nav_toggle = document.getElementById('nav-toggle');
 var $nav_side = document.getElementById('nav-side');
+
 $nav_toggle.addEventListener('click', function() {
   if (!$nav_toggle.classList.contains('active')) {
     TweenMax.to($nav_side, 0.5, {x: 100, ease: Sine.easeInOut});
