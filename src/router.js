@@ -6,8 +6,13 @@ var router = function(app) {
   app.get('/signup', controllers.Account.signupPage);
   app.post('/signup', controllers.Account.signup);
   app.get('/logout', controllers.Account.logout);
-  app.get('/home', controllers.Home.homePage);
   app.get('/', controllers.Account.loginPage);
+
+  app.get('/home', controllers.Page.homePage);
+  app.get('/app', controllers.Page.appPage);
+
+  app.post('/addCircle', controllers.Circle.addCircle);
+  app.post('/findCircle', controllers.Circle.findCircle);
 };
 
 module.exports = router;

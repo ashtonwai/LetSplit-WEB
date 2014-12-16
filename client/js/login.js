@@ -13,29 +13,10 @@ $('#login-btn').on('click', function(e) {
     //handleError("Please enter password");
     return false;
   } else {
-    sendAjax($('#loginForm').attr('action'), $('#loginForm').serialize());
+    sendAjax($('#loginForm').attr('action'), $('#loginForm').serialize(), enterPage);
     return false;
   }
 });
-
-// Ajax
-function sendAjax(action, data) {
-  $.ajax({
-    cache: false,
-    type: 'POST',
-    url: action,
-    data: data,
-    dataType: 'json',
-    success: function(result, status, xhr) {
-      enterPage(result.redirect);
-    },
-    error: function(xhr, status, error) {
-      var msg = JSON.parse(xhr.responseText).error;
-      console.log(msg);
-    }
-  });
-  return false;
-}
 
 // Animation
 $(document).ready(function() {
@@ -51,10 +32,10 @@ $signup_return.addEventListener('click', function() {
   }, 1500);
 });
 
-function enterPage(direct) {
+var enterPage = function(result) {
   TweenMax.to($login, 1.5, {y: -150, opacity: 0, ease: Sine.easeInOut});
   TweenMax.to($login_bg, 1, {opacity: 0, ease: Sine.easeInOut});
   setInterval(function() {
-    window.location.href = direct;
+    window.location.href = result.redirect;
   }, 1500);
 }

@@ -25,7 +25,7 @@ var login = function(req, res) {
       return res.status(401).json({error: "Wrong username or password"});
     } else {
       req.session.account = account.toAPI();
-      res.json({redirect: '/home'});
+      res.json({redirect: '/app'});
     }
   });
 };
@@ -48,7 +48,7 @@ var signup = function(req, res) {
         return res.status(400).json({error: "Username or email already exist"});
       } else {
         req.session.account = newAccount.toAPI();
-        res.json({redirect: '/home'});
+        res.json({redirect: '/app'});
       }
     });
   });

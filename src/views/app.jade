@@ -1,15 +1,19 @@
 extends ./_base.jade
 block title
-  title LetSplit | Home
+  title LetSplit | Circle
 block append style
-  link(rel="stylesheet", href="/assets/css/home.css")
+  link(rel="stylesheet", href="/assets/css/app.css")
 block body
-  #home-bg.bg-cover
+  #app-bg.bg-cover
     // Navigation
     include ./_navbar.jade
     #main
-      .demo
-        canvas.chart(width="200px", height="200px")
+      #app
+        canvas#chart(width="400px", height="400px")
+        a.circle-btn(style="float:left;")
+          i#plus.fa.fa-plus.fa-3x
+        a.circle-btn(style="float:right;")
+          i#minus.fa.fa-minus.fa-3x
     // Modals
     include ./_modals.jade
     block footer
@@ -19,4 +23,4 @@ block append scripts
   script(type="text/javascript", src="/assets/js/lib/Chart.min.js")
   script(type="text/javascript", src="/assets/js/index.js")
   script(type="text/javascript", src="/assets/js/navbar.js")
-  script(type="text/javascript", src="/assets/js/home.js")
+  script(type="text/javascript", src="/assets/js/app.js")
