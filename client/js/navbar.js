@@ -6,5 +6,5 @@ $nav_home.addEventListener('click', function() {
 var $create_btn = document.getElementById('create-btn');
 $create_btn.addEventListener('click', function(e) {
   e.preventDefault();
-  sendAjax($('#newCircleForm').attr('action'), $('#newCircleForm').serialize());
+  sendAjax($('#newCircleForm').attr('action'), $('#newCircleForm').serialize(), enterPage);
 });

@@ -1,13 +1,5 @@
 var chart = document.getElementsByClassName('chart')[0];
 var ctx = chart.getContext('2d');
-var data = [
-{
-  value: 1,
-  color:"#D3D3D3",
-  highlight: "#FF5A5E",
-  label: "Red"
-}
-];
 
 // Functions
 function loadChart() {
@@ -15,15 +7,6 @@ function loadChart() {
     animationEasing: "easeInOutCubic"
   });
 }
-
-var chartList = function(data) {
-  console.log(data);
-}
-
-window.onload = function() {
-  loadChart();
-  sendAjax('/getCharts', null, chartList);
-};
 
 // Animation
 var $home_bg = document.getElementById('home-bg');

@@ -33,7 +33,7 @@ var addCircle = function(req, res) {
           return res.status(400).json({error: "Fail to link account with circle"});
         } else {
           console.log("circle created");
-          req.session.account.select = newCircle._id;
+          //demo
           res.json({redirect: '/app'});
         }
       });
@@ -41,21 +41,16 @@ var addCircle = function(req, res) {
   });
 };
 
-var getAllCircles = function(req, res) {
-  AccountCircle.AccountCircleModel.getAllCircles(req.session.account._id, function(error, circles) {
-    if (error) {
+var findCircle = function(req, res) {
+  Circle.CircleModel.findById(req.session.account.circle, function(error, doc) {
+    if (error || !doc) {
       console.log(error);
+      return res.status(400).json({error: "No circles found"});
     } else {
-      var circleList = [];
-      for (var obj in circles) {
-        Circle.CircleModel.findById(circles[obj].circleId, function(error, doc) {
-          circleList.push(doc);
-        });
-      }
-      return circleList;
+      res.json({circleData: doc.data});
     }
   });
 };
 
 module.exports.addCircle = addCircle;
-module.exports.getAllCircles = getAllCircles;
+module.exports.findCircle = findCircle;

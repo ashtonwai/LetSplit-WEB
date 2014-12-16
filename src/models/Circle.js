@@ -33,7 +33,7 @@ CircleSchema.statics.findById = function(circleId, callback) {
     _id: circleId
   };
 
-  CircleModel.findOne(search, callback);
+  return CircleModel.findOne(search, callback);
 };
 
 CircleModel = mongoose.model('Circle', CircleSchema);

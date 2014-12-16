@@ -166,8 +166,7 @@ footer {
   border-radius: 50%;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s 0.1s ease; }
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
   .circle-btn:hover {
     color: #337ab7;
     background: rgba(255, 255, 255, 0.6); }

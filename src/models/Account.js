@@ -51,7 +51,7 @@ AccountSchema.methods.toAPI = function() {
   return {
     _id: this._id,
     username: this.username,
-    select: "548bf8316063171b50373150"
+    circle: "548ff1450d07ba670b789ff4"
   };
 };
 
