@@ -32,7 +32,6 @@ CircleSchema.statics.findById = function(id, callback) {
   var search = {
     _id: id
   };
-
   return CircleModel.findOne(search, callback);
 };
 

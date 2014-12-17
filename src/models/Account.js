@@ -51,7 +51,8 @@ AccountSchema.methods.toAPI = function() {
   return {
     _id: this._id,
     username: this.username,
-    circle: "548ff1450d07ba670b789ff4"
+    //change circle id for demo and relogin
+    circle: "54917f3bbf9a464c2e700f25"
   };
 };
 

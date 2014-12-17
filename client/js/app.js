@@ -51,6 +51,7 @@ function enterPage(result) {
 
 function loadCircle(data) {
   new Chart(ctx).Doughnut(data, {
-    animationEasing: "easeInOutCubic"
+    animationEasing: "easeInOutCubic",
+    reponsive: true
   });
 }
