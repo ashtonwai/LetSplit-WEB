@@ -11,7 +11,7 @@ var session = require('express-session');
 var RedisStore = require('connect-redis')(session);
 
 // MongoDB
-var dbURL = process.env.MONGOHQ_URL || "mongodb://localhost/LetSplitDB";
+var dbURL = process.env.MONGOLAB_URI || "mongodb://localhost/LetSplitDB";
 var db = mongoose.connect(dbURL, function(err) {
   if (err) {
     console.log("Unable to connect to database");
