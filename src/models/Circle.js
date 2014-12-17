@@ -28,11 +28,10 @@ var CircleSchema = new mongoose.Schema({
   }
 });
 
-CircleSchema.statics.findById = function(circleId, callback) {
+CircleSchema.statics.findById = function(id, callback) {
   var search = {
-    _id: circleId
+    _id: id
   };
-
   return CircleModel.findOne(search, callback);
 };
 

@@ -13,6 +13,8 @@ var router = function(app) {
 
   app.post('/addCircle', controllers.Circle.addCircle);
   app.post('/findCircle', controllers.Circle.findCircle);
+  app.post('/add', controllers.Circle.add);
+  app.post('/sub', controllers.Circle.sub);
 };
 
 module.exports = router;

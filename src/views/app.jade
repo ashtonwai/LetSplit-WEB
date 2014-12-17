@@ -10,12 +10,38 @@ block body
     #main
       #app
         canvas#chart(width="400px", height="400px")
-        a.circle-btn(style="float:left;")
+        a.circle-btn(type="button", data-toggle="modal", data-target="#addModal", style="float:left;")
           i#plus.fa.fa-plus.fa-3x
-        a.circle-btn(style="float:right;")
+        a.circle-btn(type="button", data-toggle="modal", data-target="#subModal", style="float:right;")
           i#minus.fa.fa-minus.fa-3x
     // Modals
     include ./_modals.jade
+    #addModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="addLabel", aria-hidden="true")
+      .modal-dialog.modal-sm
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &times;
+              span.sr-only Close
+            h4#addLabel.modal-title Add
+          .modal-body
+            form#addForm(role="form", action="/add", method="POST")
+              input.form-control(type="number", name="addNum")
+          .modal-footer
+            button#add-btn.btn.btn-primary.btn-lg.btn-block(type="button") Add
+    #subModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="subLabel", aria-hidden="true")
+      .modal-dialog.modal-sm
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &times;
+              span.sr-only Close
+            h4#subLabel.modal-title Subtract
+          .modal-body
+            form#subForm(role="form", action="/sub", method="POST")
+              input.form-control(type="number", name="subNum")
+          .modal-footer
+            button#sub-btn.btn.btn-primary.btn-lg.btn-block(type="button") Subtract
     block footer
       footer Copyright 2014
 block append scripts
