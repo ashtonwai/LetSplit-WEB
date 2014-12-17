@@ -44,3 +44,28 @@ http://www.monefy.me/
 ###Mockups###
 
 ![alt tag](http://people.rit.edu/~mxw8831/LetSplit%20demo.png)
+
+
+###Architecture###
+                      Database
+                         ||
+                         ||
+                     controllers
+                    /           \
+                   /             \
+                models          views
+
+
+###Discussion###
+
+#####Pros#####
+* Good interface design
+* Smooth transition between pages
+* All files will organized
+* Codes are readable
+
+#####Cons#####
+* Need to handle errors better
+
+#####Technical Choices#####
+* Will be nice to use Angularjs with this app.
