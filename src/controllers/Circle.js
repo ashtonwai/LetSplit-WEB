@@ -33,7 +33,6 @@ var addCircle = function(req, res) {
           return res.status(400).json({error: "Fail to link account with circle"});
         } else {
           console.log("circle created");
-          //demo
           res.json({redirect: '/app'});
         }
       });
@@ -52,5 +51,15 @@ var findCircle = function(req, res) {
   });
 };
 
+var add = function(req, res) {
+  console.log(req.body.addNum);
+};
+
+var sub = function(req, res) {
+  console.log(req.body.subNum);
+};
+
 module.exports.addCircle = addCircle;
 module.exports.findCircle = findCircle;
+module.exports.add = add;
+module.exports.sub = sub;
