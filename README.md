@@ -1,17 +1,23 @@
 LetSplit
 ========
 
-A web application for expense distributions between multiple users.
+A web application to help distribute expenses between multiple users.
 
 
 ###High-Level Concepts###
 
 * Users are required to create an account and login in order to use the application.
+* Expense information is only shared between users within the circle.
+* Any updates to the circle will be displayed to other users within the circle.
 
 
-###Frameworks###
+###User Experience###
+* Users are able to create new circles. (demo version only has one cirlce, new circles can be created but will not be displayed)
+* Users can add or subtract expenses from the circle.
 
-* Node.js
+
+###Muti-User System###
+User updates to the circle will be displayed to other users or the other way.
 
 
 ###Languages###
@@ -25,7 +31,7 @@ A web application for expense distributions between multiple users.
 
 ###Libraries###
 
-TBA
+Chart.js - http://www.chartjs.org/
 
 
 ###Inspirations###
@@ -33,3 +39,33 @@ TBA
 ![alt tag](http://www.elandroidelibre.com/wp-content/uploads/2014/03/monefy-money-manager-android-app-cab.png)
 
 http://www.monefy.me/
+
+
+###Mockups###
+
+![alt tag](http://people.rit.edu/~mxw8831/LetSplit%20demo.png)
+
+
+###Architecture###
+                      Database
+                         ||
+                         ||
+                     controllers
+                    /           \
+                   /             \
+                models          views
+
+
+###Discussion###
+
+#####Pros#####
+* Good interface design
+* Smooth transition between pages
+* All files will organized
+* Codes are readable
+
+#####Cons#####
+* Need to handle errors better
+
+#####Technical Choices#####
+* Will be nice to use Angularjs with this app.
